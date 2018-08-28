@@ -10,11 +10,27 @@ image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/l
 x-kinRank: "7"
 x-alexaRank: "0"
 tags: Funds
-created: "2018-08-25"
-modified: "2018-08-25"
+created: "2018-08-27"
+modified: "2018-08-27"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/funds/master/_listings/ship-station/apis.md
 specificationVersion: "0.14"
-apis: []
+apis:
+- name: Ship Station Developer Portal - Add Funds
+  x-api-slug: carriersaddfunds-post
+  description: |-
+    Adds funds to a carrier account using the payment information on file. The body of this request should specify the following attributes:
+
+    Name               |Data Type          |Description
+    -------------------|-------------------|-------------------
+     ``carrierCode`` | string, required |  The carrier to add funds to.
+     ``amount`` | number, required | The dollar amount to add to the account.  The minimum value that can be added is $10.00.  The maximum value is $10,000.00.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/ShipStation-stacked-blue.png
+  humanURL: http://bit.ly/_ShipStation
+  baseURL: https://ssapi.shipstation.com//
+  tags: Shipping, Relative Data, Service API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/funds/master/_listings/ship-station/carriersaddfunds-post-openapi.md
 x-common:
 - type: x-website
   url: http://bit.ly/_ShipStation
